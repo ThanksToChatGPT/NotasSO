@@ -91,7 +91,7 @@ int main() {
 
     /* Crear los hilos */
     for (i = 0; i < NUM_HILOS; i++) {
-        /* pthread_create recibe: id, atributos, función, argumento */
+        /* pthread_create recibe: id, atributos, función, dato */
         error = pthread_create(&idhilo[i], NULL, (void *) proceso, (void *) &hilo_datos[i]);
         if (error != 0) {
             /* Si falla la creación, lo informamos y salimos */
